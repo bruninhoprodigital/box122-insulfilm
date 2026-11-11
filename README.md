@@ -41,4 +41,3 @@ O projeto não requer variáveis de ambiente. Nenhuma publicação foi realizada
 ## Agendamento
 O cliente escolhe o serviço, a data e o horário de preferência. O site monta uma mensagem para o WhatsApp da loja, que confirma a disponibilidade. O horário mínimo usa a abertura informada, 08:30, no fuso de Rio das Ostras.
 A foto residencial é ilustrativa (American Window Film, https://americanwindowfilm.com/blog/how-can-i-get-more-privacy-without-curtains). A foto de som é um recorte da exposição de equipamentos na fachada real.
-

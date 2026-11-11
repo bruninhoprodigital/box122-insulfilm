@@ -1,0 +1,21 @@
+.hero { position:relative; isolation:isolate; overflow:clip; padding:clamp(4rem,9vw,8rem) 0; }
+.hero::before { content:''; position:absolute; z-index:-1; inset:-20% -15%; background:radial-gradient(ellipse at 75% 45%,#124446 0%,transparent 44%); filter:blur(42px); pointer-events:none; }
+.layout { display:grid; align-items:center; gap:2rem; }
+.intro { animation:enter .65s ease-out both; }
+.frame { min-width:0; padding:.5rem; border:1px solid #397371; background:#0b171b; border-radius:1.5rem; box-shadow:0 0 55px #33dfb221; animation:enter .85s ease-out both; }
+@keyframes enter { from { opacity:0; transform:translateY(18px) scale(.98); } }
+@keyframes depth { to { translate:0 44px; } }
+@media(min-width:850px) { .layout { grid-template-columns:1fr 1fr; gap:3.5rem; } }
+@supports(animation-timeline:scroll()) {
+  .frame { animation:enter .85s ease-out both,depth linear both; animation-timeline:auto,scroll(root block); animation-range:normal,0px 700px; }
+}
+@media(prefers-reduced-motion:reduce) { .intro,.frame { animation:none; } }
+
+.hero { padding-block:clamp(2.5rem,6vw,6rem); }
+.frame :global(.photo) { aspect-ratio:1.84; }
+.frame :global(img) { object-position:center 38%; }
+@media(max-width:480px) { .frame :global(.photo) { aspect-ratio:1.7; } }
+
+.frame :global(.photo) { aspect-ratio:2.18; }
+.frame :global(img) { object-position:center 29%; }
+@media(max-width:480px) { .frame :global(.photo) { aspect-ratio:1.95; } }
