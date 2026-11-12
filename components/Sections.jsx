@@ -26,7 +26,7 @@ export function Gallery() {
     <section className="shell section" id="galeria">
       <p className="eyebrow">Galeria</p><h2>Trabalhos e espaço da Box 122</h2>
       <div className="grid gallery">
-        {[photos.bay, photos.suv, photos.front].map((photo, index) => (
+        {[{ file: 'fachada-noturna', label: 'Fachada da Box 122 à noite' }, photos.suv, photos.front].map((photo, index) => (
           <figure className="reveal" key={photo.file} style={{ '--entry': index * 12 + '%' }}>
             <Photo photo={photo} /><figcaption>{photo.label}</figcaption>
           </figure>
